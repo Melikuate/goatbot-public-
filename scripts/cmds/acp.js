@@ -6,7 +6,7 @@ module.exports = {
     name: "accept",
     aliases: ['acp'],
     version: "1.2",
-    author: "Messie Osango",
+    author: "Nicolas tesla",
     countDown: 8,
     role: 2,
     shortDescription: "accept users",
