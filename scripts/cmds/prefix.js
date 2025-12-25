@@ -4,7 +4,7 @@ const { utils } = global;
 module.exports = {
   config: {
     name: "prefix",
-    aliases: ["🌚"],
+    aliases: ["🛌"],
     version: "1.3",
     author: "messie osango",
     countDown: 5,
