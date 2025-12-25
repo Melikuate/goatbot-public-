@@ -5,7 +5,7 @@ module.exports = {
         name: "prompt3",
         aliases: ['p'],
         version: "1.0",
-        author: "Nova Calyx",
+        author: "Nicolas tesla",
         countDown: 5,
         role: 0,
         shortDescription: "Generate an AI prompt ",
