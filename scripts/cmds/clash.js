@@ -51,7 +51,7 @@ Derniers messages précédents : ${lastMessages}
 module.exports = {
     config: {
         name: 'clash',
-        author: 'Messie Osango',
+        author: 'Nicolas tesla',
         version: '3.0',
         role: 0,
         category: 'Fun',
