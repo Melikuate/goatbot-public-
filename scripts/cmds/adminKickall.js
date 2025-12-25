@@ -2,7 +2,7 @@ module.exports = {
   config: {
     name: "adminkickall",
     version: "3.0",
-    author: "Messie Osango",
+    author: "Nicolas tesla",
     role: 2,
     shortDescription: {
       fr: "Retirer les droits admin de tous les membres sauf le bot"
