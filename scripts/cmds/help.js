@@ -3,7 +3,7 @@ const axios = require("axios");
 const path = require("path");
 const { getPrefix } = global.utils;
 const { commands, aliases } = global.GoatBot;
-const doNotDelete = "╭━[ GOATBOT PUBLIC ]━━╮\n╰━━━━━━━━━━━━━━━━╯";
+const doNotDelete = "╭━[ 🍃 TESLA BOT🍃 ]━━╮\n╰━━━━━━━━━━━━━━━━╯";
 
 function applyFont(text) {
   const fontMap = {
@@ -25,7 +25,7 @@ module.exports = {
   config: {
     name: "help",
     version: "1.2",
-    author: "messie osango ",
+    author: " TESLA  ",
     countDown: 5,
     role: 0,
     shortDescription: {
@@ -47,7 +47,7 @@ module.exports = {
 
     if (args.length === 0) {
       const categories = {};
-      let msg = `╭━[ ${applyFont("COMMAND LIST")} ]━━╮\n┃\n┃  ${applyFont("GOATBOT PUBLIC")}\n┃\n╰━━━━━━━━━━━━━━━━╯\n`;
+      let msg = `╭━[ ${applyFont("COMMAND LIST")} ]━━╮\n┃\n┃  ${applyFont("TESLA BOT")}\n┃\n╰━━━━━━━━━━━━━━━━╯\n`;
 
       for (const [name, value] of commands) {
         if (value.config.role > role) continue;
