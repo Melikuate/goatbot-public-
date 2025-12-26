@@ -1,6 +1,6 @@
 const axios = require('axios');
-const API_URL = 'https://messie-flash-api-ia.vercel.app/chat?prompt=';
-const API_KEY = 'messie12356osango2025jinWoo';
+const API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent';
+const API_KEY = 'AIzaSyBMS1KyweYKTTWOsK2C6gtwlAGo6v9HcqY'; // Remplacez par votre clé API Gemini
 const activeClashes = new Map();
 const clashHistories = new Map();
 
@@ -29,11 +29,20 @@ Derniers messages précédents : ${lastMessages}
 [USER - ${adversaireNom}]: ${input}`;
 
     try {
-        const response = await axios.get(`${API_URL}${encodeURIComponent(fullPrompt)}&apiKey=${API_KEY}`, {
+        const response = await axios.post(`${API_URL}?key=${API_KEY}`, {
+            contents: [{
+                parts: [{
+                    text: fullPrompt
+                }]
+            }]
+        }, {
             timeout: 10000,
-            headers: {'Accept': 'application/json'}
+            headers: {
+                'Content-Type': 'application/json'
+            }
         });
-        const result = response.data?.parts?.[0]?.reponse || response.data?.response;
+        
+        const result = response.data?.candidates?.[0]?.content?.parts?.[0]?.text;
         if (result) {
             const words = result.trim().split(/\s+/);
             if (words.length > 50) return words.slice(0, 50).join(' ');
@@ -43,7 +52,8 @@ Derniers messages précédents : ${lastMessages}
             return result.trim();
         }
         return "Erreur IA: réponse vide";
-    } catch {
+    } catch (error) {
+        console.error('Erreur API Gemini:', error.response?.data || error.message);
         return "Erreur de connexion au serveur IA";
     }
 }
