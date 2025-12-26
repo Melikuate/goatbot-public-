@@ -1,6 +1,6 @@
 const axios = require('axios');
 const API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent';
-const API_KEY = 'AIzaSyBMS1KyweYKTTWOsK2C6gtwlAGo6v9HcqY'; 
+const API_KEY = 'AIzaSyAlsK7zSi7Y-xvU00p8-paqlxh5D5ibAPQ'; 
 const activeClashes = new Map();
 const clashHistories = new Map();
 
