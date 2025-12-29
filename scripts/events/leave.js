@@ -25,7 +25,7 @@ module.exports = {
 			session4: "evening",
 			leaveType1: "left",
 			leaveType2: "was kicked from",
-			defaultLeaveMessage: [ "{userName} {type} the group , de toute façon tu étais comme Sakura " ]
+			defaultLeaveMessage: [ "{userName} {type} the group , de toute façon tu étais comme Sakura " "J’ai toujours su que {userName} était une merde. Partir, c’est la seule chose que tu sais faire " "{userName}, même en quittant, tu restes insignifiant." "Encore une preuve que {userName} n’a jamais eu de valeur ici." ]
 		}
 	},
 
